@@ -105,7 +105,7 @@ namespace IntroductionToProgramming
         public void EighthTask()
         {
 
-            Console.WriteLine($"Задача #8 Для показа рада числе от 1 до N c шагом 2 введите число: ");
+            Console.WriteLine($"Задача #8 Для показа ряда введёного числа от 1 до N c шагом 2 введите число: ");
             TaskDataSet();
             answer = firstNumber % 2 == 0 ? firstNumber : firstNumber - 1;
             Console.WriteLine($"Ряд чисел с шагом в 2: ");

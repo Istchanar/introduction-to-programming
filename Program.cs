@@ -2,7 +2,7 @@
 using IntroductionToProgramming;
 using System;
 
-
+/*
 var lessonOne = new FirstLesson();
 
 Console.Write("Введите номер урока: ");
@@ -22,7 +22,7 @@ do
 while (exitValue != "exit");
 
 
-/*
+
 Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
 456 -> 5
@@ -43,35 +43,72 @@ while (exitValue != "exit");
 7 -> да
 1 -> нет
 
+*/
+Console.WriteLine("Задача #15 Введите номер дня недели, для проверки является ли день выходным");
+string number;
+bool stringСheck;
+int nums;
+do
+{
+    Console.WriteLine("Введите номер дня недели: ");
+    number = Console.ReadLine()!;
+    stringСheck = int.TryParse(number, out int num);
+    nums = num;
+    if (nums >= 1 && nums <= 7) {
+        Console.WriteLine((nums == 6 || nums == 7) ? "Выходной" : "Будний" );
+    }
+} while (true || nums < 1 || nums > 7);
+/*
+
 Console.WriteLine("Задача #10 Введите трёхзначное число для получения цифры во втором разряде: ");
 
 int numberScope;
-bool lengthСheck;
+bool stringСheck;
+string number;
 
-
-do {
+do
+{
     Console.WriteLine("Введите трёхзначное число: ");
-    lengthСheck = int.TryParse(Console.ReadLine()!, out int number);
-    numberScope = number;
+    number = Console.ReadLine()!;
+    stringСheck = int.TryParse(number, out int num);
+    numberScope = num;
 }
-while (numberScope < 100 || numberScope > 999 || lengthСheck != true);
-Console.WriteLine($"Второе число в трёхзначной цифре: {(numberScope / 10) % 10}");
+while (stringСheck != true || number.Length != (numberScope < 0 ? 4 : 3));
+Console.WriteLine($"Второе число в трёхзначной цифре: {(Math.Abs(numberScope) / 10) % 10}");
+*/
 
 
-Console.WriteLine("Задача #13 Введите число для получения цифры в третьем разряде: ");
+/*
+Console.WriteLine("Задача #13 Введите число для получения цифры в третьем разряде (max/min - long): ");
+
+string stringNumber;
+bool stringСheck;
+long numberFromString;
+int stringLength;
 
 do
 {
     Console.WriteLine("Введите число: ");
-    lengthСheck = int.TryParse(Console.ReadLine()!, out int number);
-    numberScope = number;
-    if (numberScope > 100) {
-        Console.WriteLine($"Третье число в цифре: {(numberScope / 100) % 10}");
+    stringNumber = Console.ReadLine()!;
+    stringLength = stringNumber.Length;
+    stringСheck = long.TryParse(stringNumber, out long numberValue);
+    numberFromString = numberValue;
+    int strs;
+    strs = numberFromString < 0 ? stringLength - 1 : stringLength;
+    
+    long digit = 1;
+
+    for (int i = 0; i < strs - 3; i++) {
+        digit *= 10;
     }
-    else if(numberScope < 100 && numberScope > -100)
+
+    if (numberValue > 99 || numberValue < -99) {
+        Console.WriteLine($"Третье число в цифре: {Math.Abs((numberValue / digit) % 10)}");
+    }
+    else if(stringСheck == true)
     {
         Console.WriteLine($"Третьего числа нет");
     }
 }
-while (lengthСheck != true);
+while (true || stringLength > (numberFromString < 0 ? 20 : 19) || (numberFromString == 0 && (stringLength > 19)));
 */
