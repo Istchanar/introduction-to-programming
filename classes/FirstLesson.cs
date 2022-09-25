@@ -9,12 +9,6 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace IntroductionToProgramming
 {
-    enum TaskNumber : int { 
-        SECOND = 2,
-        FOURTH = 4,
-        SIXTH = 6,
-        EIGHTH = 8
-    }
     internal class FirstLesson
     {
         private float firstNumber, secondNumber, thirdNumber, answer;
@@ -32,12 +26,12 @@ namespace IntroductionToProgramming
                 isExpectedNumber = int.TryParse(Console.ReadLine()!, out int result);
                 taskNumber = result;
             }
-            while ((isExpectedNumber != true) || !(taskNumber is (int)TaskNumber.SECOND or (int)TaskNumber.FOURTH or (int)TaskNumber.SIXTH or (int)TaskNumber.EIGHTH));
+            while (isExpectedNumber != true || !(taskNumber is (int)TaskNumber.SECOND or (int)TaskNumber.FOURTH or (int)TaskNumber.SIXTH or (int)TaskNumber.EIGHTH));
 
             this.taskNumber = taskNumber;
 
-            switch(taskNumber)
-            { 
+            switch (taskNumber)
+            {
                 case (int)TaskNumber.SECOND:
                     SecondTask();
                     break;
@@ -59,12 +53,12 @@ namespace IntroductionToProgramming
             {
                 firstNumber = float.Parse(Console.ReadLine()!);
 
-                if (this.taskNumber == (int)TaskNumber.SECOND || this.taskNumber == (int)TaskNumber.FOURTH)
+                if (taskNumber == (int)TaskNumber.SECOND || taskNumber == (int)TaskNumber.FOURTH)
                 {
                     secondNumber = float.Parse(Console.ReadLine()!);
                 }
 
-                if (this.taskNumber == (int)TaskNumber.FOURTH)
+                if (taskNumber == (int)TaskNumber.FOURTH)
                 {
                     thirdNumber = float.Parse(Console.ReadLine()!);
                 }
@@ -75,7 +69,8 @@ namespace IntroductionToProgramming
                 Console.WriteLine($"Введены неправильные данные: \n {error}");
             }
         }
-        public void SecondTask() {
+        public void SecondTask()
+        {
             Console.WriteLine($"Задача #2 Введите два числа, чтобы узнать большее: ");
             TaskDataSet();
 
@@ -93,7 +88,7 @@ namespace IntroductionToProgramming
             Console.WriteLine($"Задача #4 Введите три числа, чтобы узнать большее: ");
             TaskDataSet();
             answer = firstNumber > secondNumber && firstNumber > thirdNumber
-                   ? firstNumber : (secondNumber > thirdNumber ? secondNumber : thirdNumber);
+                   ? firstNumber : secondNumber > thirdNumber ? secondNumber : thirdNumber;
             Console.WriteLine($"Большее число: {answer}");
         }
         public void SixthTask()
