@@ -75,12 +75,10 @@ namespace IntroductionToProgramming
                 stringLength = stringNumber.Length;
                 stringСheck = long.TryParse(stringNumber, out long numberValue);
                 numberFromString = numberValue;
-                int strs;
-                strs = numberFromString < 0 ? stringLength - 1 : stringLength;
-
+                int stringLengthWithoutMinus = numberFromString < 0 ? stringLength - 1 : stringLength;
                 long digit = 1;
 
-                for (int i = 0; i < strs - 3; i++)
+                for (int i = 0; i < stringLengthWithoutMinus - 3; i++)
                 {
                     digit *= 10;
                 }
