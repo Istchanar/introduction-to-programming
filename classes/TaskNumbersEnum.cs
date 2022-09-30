@@ -14,6 +14,12 @@ namespace IntroductionToProgramming
         EIGHTH = 8,
         TENTH = 10,
         THIRTEENTH = 13,
-        FIFTEENTH= 15
+        FIFTEENTH = 15,
+        NINETEENTH = 19,
+        TWENTYFIRST = 21,
+        TWENTYTHIRD = 23,
+        TWENTYFIFTH = 25,
+        TWENTYSEVENTH = 27,
+        TWENTYNINTH = 29
     }
 }

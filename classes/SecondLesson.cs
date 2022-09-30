@@ -18,7 +18,7 @@ namespace IntroductionToProgramming
 
             do
             {
-                Console.Write("Введите номер задания: ");
+                Console.Write("УРОК 2. Введите номер задания: ");
                 isExpectedNumber = int.TryParse(Console.ReadLine()!, out int result);
                 taskNumber = result;
             }
@@ -58,7 +58,6 @@ namespace IntroductionToProgramming
             Console.WriteLine($"Второе число в трёхзначной цифре: {(Math.Abs(numberScope) / 10) % 10}");
 
         }
-
         public void ThirteenthTask()
         {
             Console.WriteLine("Задача #13 Введите число для получения цифры в третьем разряде (max/min - long): ");
@@ -94,7 +93,6 @@ namespace IntroductionToProgramming
             }
             while (stringСheck != true || stringLength > (numberFromString < 0 ? 20 : 19) || (numberFromString == 0 && (stringLength > 19)));
         }
-
         public void FifteenthTask()
         {
             Console.WriteLine("Задача #15 Введите номер дня недели, для проверки является ли день выходным");

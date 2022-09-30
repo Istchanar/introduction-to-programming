@@ -22,7 +22,7 @@ namespace IntroductionToProgramming
 
             do
             {
-                Console.Write("Введите номер задания: ");
+                Console.Write("УРОК 1. Введите номер задания: ");
                 isExpectedNumber = int.TryParse(Console.ReadLine()!, out int result);
                 taskNumber = result;
             }
