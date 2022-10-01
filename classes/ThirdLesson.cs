@@ -1,17 +1,10 @@
-﻿using IntroductionToProgramming;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace IntroductionToProgramming
 {
     internal class ThirdLesson
     {
-        private int taskNumber;
-        public void TaskInit()
+        public static void TaskInit()
         {
             bool isExpectedNumber;
             int taskNumber;
@@ -19,13 +12,11 @@ namespace IntroductionToProgramming
 
             do
             {
-                Console.Write("УРОК 3. Введите номер задания: ");
+                Console.Write("УРОК 3. Введите номер задания (19, 21, 23): ");
                 isExpectedNumber = int.TryParse(Console.ReadLine()!, out int result);
                 taskNumber = result;
             }
             while (isExpectedNumber != true || !(taskNumber is (int)TaskNumber.NINETEENTH or (int)TaskNumber.TWENTYFIRST or (int)TaskNumber.TWENTYTHIRD));
-
-            this.taskNumber = taskNumber;
 
             switch (taskNumber)
             {
@@ -40,7 +31,7 @@ namespace IntroductionToProgramming
                     break;
             }
         }
-        public void NineteenthTask()
+        public static void NineteenthTask()
         {
             Console.WriteLine("Задача #19 Введите пятизначное число для проверки, является ли оно палиндромом: ");
             string numberFromString;
@@ -79,7 +70,7 @@ namespace IntroductionToProgramming
 
             Console.WriteLine(palendromCheck ? "Палиндром" : "Не палиндром");
         }
-        public void TwentyfirstTask()
+        public static void TwentyfirstTask()
         {
             Console.WriteLine("Задача #21 Введите координаты двух точек для определения расстояния между ними в 3D простронстве: ");
 
@@ -87,7 +78,7 @@ namespace IntroductionToProgramming
             string pointB;
             bool isPatternPointA;
             bool isPatternPointB;
-            Regex numbersString = new Regex(@"^(?:\-?\d+[, ]*)+$");
+            Regex numbersString = new(@"^(?:\-?\d+[, ]*)+$");
             do
             {
                 Console.WriteLine("Координаты точки А, через запятую: ");
@@ -115,12 +106,12 @@ namespace IntroductionToProgramming
 
             Console.WriteLine(distance);
         }
-        public void TwentythirdTask()
+        public static void TwentythirdTask()
         {
             Console.WriteLine("Задача #23 Введите число N для получения кубов числе от 1 до N: ");
 
             string numberFromString = Console.ReadLine()!;
-            bool numberCheck = int.TryParse(numberFromString, out int number);
+            _ = int.TryParse(numberFromString, out int number);
 
             int numberValue = number;
 

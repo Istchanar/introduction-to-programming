@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace IntroductionToProgramming
 {
     internal class FourthLesson
     {
-        private int taskNumber;
-
-        public void TaskInit()
+        public static void TaskInit()
         {
             bool isExpectedNumber;
             int taskNumber;
@@ -19,13 +12,11 @@ namespace IntroductionToProgramming
 
             do
             {
-                Console.Write("УРОК 4. Введите номер задания: ");
+                Console.Write("УРОК 4. Введите номер задания (25, 27, 29): ");
                 isExpectedNumber = int.TryParse(Console.ReadLine()!, out int result);
                 taskNumber = result;
             }
             while (isExpectedNumber != true || !(taskNumber is (int)TaskNumber.TWENTYFIFTH or (int)TaskNumber.TWENTYSEVENTH or (int)TaskNumber.TWENTYNINTH));
-
-            this.taskNumber = taskNumber;
 
             switch (taskNumber)
             {
@@ -41,12 +32,13 @@ namespace IntroductionToProgramming
             }
         }
 
-        public void TwentyfifthTask() {
+        public static void TwentyfifthTask()
+        {
             Console.WriteLine("Задача #25 Введите два числа A и В через запятую для возведения A в степень B: ");
 
             string twoNumbers;
             bool isTwoNumbers;
-            Regex numbersString = new Regex(@"^(\-?\d+[,])(\-?\d+)");
+            Regex numbersString = new(@"^(\-?\d+[,])(\-?\d+)");
             do
             {
                 Console.WriteLine("Введите два числа A и В, через запятую: ");
@@ -67,12 +59,13 @@ namespace IntroductionToProgramming
             Console.WriteLine($"Результат возведения А в степень В: {result}");
         }
 
-        public void TwentyseventhTask() {
+        public static void TwentyseventhTask()
+        {
             Console.WriteLine("Задача #27 Введите число, чтобы узнать сумму цифр в числе: ");
 
             string number;
             bool isNumbers;
-            Regex numbersString = new Regex(@"^(\d+)");
+            Regex numbersString = new(@"^(\d+)");
             do
             {
                 Console.WriteLine("Введите число: ");
@@ -91,12 +84,13 @@ namespace IntroductionToProgramming
             Console.WriteLine($"Сумма чисел в числе: {result}");
         }
 
-        public void TwentyninthTask() {
+        public static void TwentyninthTask()
+        {
             Console.WriteLine("Задача #29 Введите числа через запятую для программного преобразования их в массив и вывод на экран элементов массива: ");
 
             string numbers;
             bool isNumbers;
-            Regex numbersString = new Regex(@"^(?:\-?\d+[, ]*)+$");
+            Regex numbersString = new(@"^(?:\-?\d+[, ]*)+$");
             do
             {
                 Console.WriteLine("Введите число: ");

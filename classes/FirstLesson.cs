@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
-
-namespace IntroductionToProgramming
+﻿namespace IntroductionToProgramming
 {
     internal class FirstLesson
     {
         private float firstNumber, secondNumber, thirdNumber, answer;
         private int taskNumber;
-
         public void TaskInit()
         {
             bool isExpectedNumber;
@@ -22,7 +12,7 @@ namespace IntroductionToProgramming
 
             do
             {
-                Console.Write("УРОК 1. Введите номер задания: ");
+                Console.Write("УРОК 1. Введите номер задания (2, 4, 6, 8): ");
                 isExpectedNumber = int.TryParse(Console.ReadLine()!, out int result);
                 taskNumber = result;
             }

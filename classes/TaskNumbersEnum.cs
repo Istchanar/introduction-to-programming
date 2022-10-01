@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IntroductionToProgramming
+﻿namespace IntroductionToProgramming
 {
     enum TaskNumber : int
     {
@@ -20,6 +14,9 @@ namespace IntroductionToProgramming
         TWENTYTHIRD = 23,
         TWENTYFIFTH = 25,
         TWENTYSEVENTH = 27,
-        TWENTYNINTH = 29
+        TWENTYNINTH = 29,
+        THIRTYFOURTH = 34,
+        THIRTYSIXTH = 36,
+        THIRTYEIGHTH = 38
     }
 }

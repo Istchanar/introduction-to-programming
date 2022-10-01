@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IntroductionToProgramming
+﻿namespace IntroductionToProgramming
 {
     internal class SecondLesson
     {
-        private int taskNumber;
-
-        public void TaskInit()
+        public static void TaskInit()
         {
             bool isExpectedNumber;
             int taskNumber;
@@ -18,13 +10,11 @@ namespace IntroductionToProgramming
 
             do
             {
-                Console.Write("УРОК 2. Введите номер задания: ");
+                Console.Write("УРОК 2. Введите номер задания (10, 13, 15): ");
                 isExpectedNumber = int.TryParse(Console.ReadLine()!, out int result);
                 taskNumber = result;
             }
             while (isExpectedNumber != true || !(taskNumber is (int)TaskNumber.TENTH or (int)TaskNumber.THIRTEENTH or (int)TaskNumber.FIFTEENTH));
-
-            this.taskNumber = taskNumber;
 
             switch (taskNumber)
             {
@@ -39,7 +29,7 @@ namespace IntroductionToProgramming
                     break;
             }
         }
-        public void TenthTask()
+        public static void TenthTask()
         {
             Console.WriteLine("Задача #10 Введите трёхзначное число для получения цифры во втором разряде: ");
 
@@ -58,7 +48,7 @@ namespace IntroductionToProgramming
             Console.WriteLine($"Второе число в трёхзначной цифре: {(Math.Abs(numberScope) / 10) % 10}");
 
         }
-        public void ThirteenthTask()
+        public static void ThirteenthTask()
         {
             Console.WriteLine("Задача #13 Введите число для получения цифры в третьем разряде (max/min - long): ");
 
@@ -93,7 +83,7 @@ namespace IntroductionToProgramming
             }
             while (stringСheck != true || stringLength > (numberFromString < 0 ? 20 : 19) || (numberFromString == 0 && (stringLength > 19)));
         }
-        public void FifteenthTask()
+        public static void FifteenthTask()
         {
             Console.WriteLine("Задача #15 Введите номер дня недели, для проверки является ли день выходным");
             string number;
