@@ -93,7 +93,7 @@ namespace IntroductionToProgramming
             Regex numbersString = new(@"^(?:\-?\d+[, ]*)+$");
             do
             {
-                Console.WriteLine("Введите число: ");
+                Console.WriteLine("Введите числа через запятую: ");
                 numbers = Console.ReadLine()!;
                 isNumbers = numbersString.Match(numbers).Success;
             } while (isNumbers != true);

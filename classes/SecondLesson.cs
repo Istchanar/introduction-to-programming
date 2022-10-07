@@ -59,7 +59,7 @@
 
             do
             {
-                Console.WriteLine("Введите число: ");
+                Console.WriteLine("Введите число не длиннее long: ");
                 stringNumber = Console.ReadLine()!;
                 stringLength = stringNumber.Length;
                 stringСheck = long.TryParse(stringNumber, out long numberValue);

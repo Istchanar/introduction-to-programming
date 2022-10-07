@@ -10,35 +10,38 @@ static void startLessons(int lessonNumber)
     string exitValue;
     do
     {
-        if (innerLessonNumber == 1)
-        {
-            var lessonOne = new FirstLesson();
-            lessonOne.TaskInit();
-        }
-
-        if (innerLessonNumber == 2)
-        {
-            SecondLesson.TaskInit();
-        }
-
-        if (innerLessonNumber == 3)
-        {
-            ThirdLesson.TaskInit();
-        }
-
-        if (innerLessonNumber == 4)
-        {
-            FourthLesson.TaskInit();
-        }
-
-        if (innerLessonNumber == 5)
-        {
-            var lessonFive = new FifthLesson();
-            lessonFive.TaskInit();
-        }
-
         Console.ForegroundColor = ConsoleColor.Yellow;
+        switch (innerLessonNumber)
+        {
+            case 1:
+                var lessonOne = new FirstLesson();
+                lessonOne.TaskInit();
+                break;
+            case 2:
+                SecondLesson.TaskInit();
+                break;
+            case 3:
+                ThirdLesson.TaskInit();
+                break;
+            case 4:
+                FourthLesson.TaskInit();
+                break;
+            case 5:
+                var lessonFive = new FifthLesson();
+                lessonFive.TaskInit();
+                break;
+            case 6:
+                SixthLesson.TaskInit();
+                break;
+            case 7:
+            case 8:
+            case 9:
+            default:
+                Console.WriteLine("Такого урока нет.");
+                break;
 
+        }
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("\nДля выхода набрать exit, продолжить - нажать Enter, сменить урок - change:");
         exitValue = Console.ReadLine()!;
         if (exitValue == "change")
@@ -56,10 +59,10 @@ static int LessonChoice()
     Console.ForegroundColor = ConsoleColor.Green;
     do
     {
-        Console.Write("Введите номер урока (1, 2, 3, 4, 5): ");
+        Console.Write("Введите номер урока (1, 2, 3, 4, 5, 6, 7, 8, 9): ");
         parseSuccess = int.TryParse(Console.ReadLine()!, out int number);
         lessonNumber = number;
-    } while (parseSuccess != true && (lessonNumber != 1 || lessonNumber != 2 || lessonNumber != 3 || lessonNumber != 4 || lessonNumber != 5));
+    } while (parseSuccess != true);
 
     return lessonNumber;
 }

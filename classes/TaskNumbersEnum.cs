@@ -17,6 +17,8 @@
         TWENTYNINTH = 29,
         THIRTYFOURTH = 34,
         THIRTYSIXTH = 36,
-        THIRTYEIGHTH = 38
+        THIRTYEIGHTH = 38,
+        FORTYFIRST = 41,
+        FORTYTHIRD = 43
     }
 }
