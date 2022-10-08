@@ -34,6 +34,8 @@ static void startLessons(int lessonNumber)
                 SixthLesson.TaskInit();
                 break;
             case 7:
+                SeventhLesson.TaskInit();
+                break;
             case 8:
             case 9:
             default:

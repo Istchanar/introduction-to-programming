@@ -19,6 +19,9 @@
         THIRTYSIXTH = 36,
         THIRTYEIGHTH = 38,
         FORTYFIRST = 41,
-        FORTYTHIRD = 43
+        FORTYTHIRD = 43,
+        FORTYSEVENTH = 47,
+        FIFTIETH = 50,
+        FIFTYSECOND = 52
     }
 }
