@@ -72,9 +72,9 @@ namespace IntroductionToProgramming
 
             var positionNumbers = numbers.Split(',').Select(numberInString => int.Parse(numberInString)).ToArray();
 
-            if (array.GetLength(0) - 1 >= positionNumbers[0] && array.GetLength(1) - 1 >= positionNumbers[1])
+            if (array.GetLength(0) - 1 >= positionNumbers[1] && array.GetLength(1) - 1 >= positionNumbers[0])
             {
-                Console.WriteLine($"Элемент на позиции [{positionNumbers[0]},{positionNumbers[1]}]: {array[positionNumbers[0], positionNumbers[1]]}");
+                Console.WriteLine($"Элемент на позиции [{positionNumbers[0]},{positionNumbers[1]}]: {array[positionNumbers[1], positionNumbers[0]]}");
             }
             else
             {
@@ -96,7 +96,9 @@ namespace IntroductionToProgramming
                 {
                     sumInColumn += array[i, j];
                 }
-                Console.Write($"{sumInColumn} ");
+                float value = (float)sumInColumn / array.GetLength(0);
+                Console.Write($"{value} ");
+                sumInColumn = 0;
             }
             Console.Write($"]");
         }
