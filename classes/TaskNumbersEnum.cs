@@ -22,6 +22,11 @@
         FORTYTHIRD = 43,
         FORTYSEVENTH = 47,
         FIFTIETH = 50,
-        FIFTYSECOND = 52
+        FIFTYSECOND = 52,
+        FIFTYFOURTH = 54,
+        FIFTYSIXTH = 56,
+        FIFTYEIGHTH = 58,
+        SIXTIETH = 60,
+        SIXTYSECOND = 62
     }
 }

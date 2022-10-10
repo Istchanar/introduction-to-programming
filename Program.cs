@@ -1,5 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using IntroductionToProgramming;
+using System;
+using System.Text.Json.Serialization;
+using static System.Net.Mime.MediaTypeNames;
+
 
 int lessonNumber = LessonChoice();
 startLessons(lessonNumber);
@@ -37,6 +41,8 @@ static void startLessons(int lessonNumber)
                 SeventhLesson.TaskInit();
                 break;
             case 8:
+                EighthLesson.TaskInit();
+                break;
             case 9:
             default:
                 Console.WriteLine("Такого урока нет.");
@@ -44,7 +50,7 @@ static void startLessons(int lessonNumber)
 
         }
         Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("\nДля выхода набрать exit, продолжить - нажать Enter, сменить урок - change:");
+        Console.WriteLine("\nДля выхода набрать exit, для смены урока набрать change, продолжить - нажать Enter:");
         exitValue = Console.ReadLine()!;
         if (exitValue == "change")
         {
