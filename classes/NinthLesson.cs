@@ -66,9 +66,9 @@ namespace IntroductionToProgramming
             int valueN = random.Next(0, 9);
             Console.WriteLine($"M = {valueM}, N = {valueN}");
             // Переполнение стека наступает при следующих значениях:
-            // m = 3 n = 10
-            // m = 2 n = 6882
-            // m = 1 n = 13764
+            // M = 3 N = 10
+            // M = 2 N = 6882
+            // M = 1 N = 13764
             Console.WriteLine($"{AckermannFunction(valueM, valueN)}");
         }
 
