@@ -27,6 +27,9 @@
         FIFTYSIXTH = 56,
         FIFTYEIGHTH = 58,
         SIXTIETH = 60,
-        SIXTYSECOND = 62
+        SIXTYSECOND = 62,
+        SIXTYFOURTH = 64,
+        SIXTYSIXTH = 66,
+        SIXTYEIGHTH = 68
     }
 }

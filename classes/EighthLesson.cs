@@ -146,14 +146,11 @@ namespace IntroductionToProgramming
 
             int[,] C = new int[commonSide, commonSide];
 
-            for (int j = 0; j < A.GetLength(0); j++) {
-                for (int f = 0; f < B.GetLength(1); f++)
-                {
-                    for (int k = 0; k < B.GetLength(0); k++)
-                    {
-                        C[j, f] += A[j, k] * B[k, f];
+            for (int i = 0; i < A.GetLength(0); i++) {
+                for (int j = 0; j < B.GetLength(1); j++){
+                    for (int k = 0; k < B.GetLength(0); k++){
+                        C[i, j] += A[i, k] * B[k, j];
                     }
-
                 }
             }
 
@@ -162,7 +159,7 @@ namespace IntroductionToProgramming
         }
         public static void SixtiethTask()
         {
-            Console.WriteLine("Задание #56 Программно задаётся трехмерный массив размера [2-4] на [2-4] на [2-4]" +
+            Console.WriteLine("Задание #60 Программно задаётся трехмерный массив размера [2-4] на [2-4] на [2-4]" +
                 "с неповторяющимися значениями от 10 до 99, с выводом координат элементов массива: ");
             // Незаполненный массив
             Random random = new();

@@ -1,9 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using IntroductionToProgramming;
-using System;
-using System.Text.Json.Serialization;
-using static System.Net.Mime.MediaTypeNames;
-
 
 int lessonNumber = LessonChoice();
 startLessons(lessonNumber);
@@ -15,6 +11,7 @@ static void startLessons(int lessonNumber)
     do
     {
         Console.ForegroundColor = ConsoleColor.Yellow;
+
         switch (innerLessonNumber)
         {
             case 1:
@@ -44,6 +41,8 @@ static void startLessons(int lessonNumber)
                 EighthLesson.TaskInit();
                 break;
             case 9:
+                NinthLesson.TaskInit();
+                break;
             default:
                 Console.WriteLine("Такого урока нет.");
                 break;
